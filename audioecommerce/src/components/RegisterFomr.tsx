@@ -13,38 +13,48 @@ export const RegisterForm = () => {
     e.preventDefault();
     try {
       await signUpWithEmail(email, password);
-      navigate("/"); 
+      navigate("/");
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       setError(error.message);
     }
   };
 
   return (
-    <div>
-      <h2>Cadastro</h2>
-      <form onSubmit={handleSignUp}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Senha"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">Criar Conta</button>
-      </form>
-      
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      
-      <p>
-        Já tem conta? <Link to="/login">Faça login</Link>
-      </p>
+    <div className="auth-container">
+      <div className="auth-header">
+        <h1>Audio</h1>
+        <p>It's modular and designed to last</p>
+      </div>
+
+      <div className="auth-form">
+        <form onSubmit={handleSignUp}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Senha"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">Sign Up</button>
+        </form>
+
+        {error && <p style={{ color: "red" }}>{error}</p>}
+
+      </div>
+
+      <div className="auth-navigation">
+        <p>
+          If you have an account? <Link to="/login">Sign In here</Link>
+        </p>
+      </div>
     </div>
   );
 };

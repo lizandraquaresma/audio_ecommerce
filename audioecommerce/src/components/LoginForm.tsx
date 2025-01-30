@@ -17,6 +17,7 @@ export const LoginForm = () => {
         try {
             await signInWithEmail(email, password);
             navigate(from, { replace: true });
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
             setError(error.message);
         }
@@ -47,20 +48,21 @@ export const LoginForm = () => {
                         required
                     />
                     <p><Link to="/forgot-password">Forgot Password?</Link></p>
-                    
+
                     <button type="submit">Sign In</button>
                 </form>
 
                 <LoginButton />
 
                 {error && <p style={{ color: "red" }}>{error}</p>}
-
-                <div className="auth-navigation">
-                    <p>
-                        Didn’t have any account? <Link to="/signup">Sign Up here</Link>
-                    </p>
-                </div>
             </div>
+
+            <div className="auth-navigation">
+                <p>
+                    Didn’t have any account? <Link to="/signup">Sign Up here</Link>
+                </p>
+            </div>
+
         </div>
     );
 };

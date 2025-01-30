@@ -35,7 +35,7 @@ form {
   flex-direction: column;
   gap: 1em;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 1em auto;
 }
 
 .auth-navigation {
