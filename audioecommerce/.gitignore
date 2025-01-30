@@ -1,0 +1,64 @@
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+firebase-debug.log
+
+# Dependências
+node_modules
+dist
+dist-ssr
+*.local
+/.yarn/
+/.pnp/
+.pnp.*
+.yarn-integrity
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.code-workspace
+
+# Builds e distribuição
+/dist/
+/dist-ssr/
+/.cache/
+.out/
+.netlify
+
+# Ambiente
+.env
+.env.local
+.env.development
+.env.production
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Firebase (adicione se necessário)
+.firebase/
+firebase.json  # Só ignore se não for compartilhar configurações
+.firebaserc    # Contém IDs de projeto - ideal para ignorar
+
+# Testes
+/coverage/
+.nyc_output/
+
+# Vite (específico)
+*.local
+.env.*.local
+__sapper__/
+/cypress/

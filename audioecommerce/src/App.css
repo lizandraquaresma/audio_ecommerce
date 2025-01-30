@@ -1,0 +1,21 @@
+/* #root {
+  max-width: 1280px;
+  padding: 2rem;
+  text-align: center;
+  background-image: url("assets/auth_bgd.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 800px;
+  justify-self: center;
+  margin: 0 0;
+} */

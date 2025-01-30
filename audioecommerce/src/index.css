@@ -5,8 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-image: url('assets/imgs/auth-bg.png');
-  background-repeat: no-repeat;
+  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,53 +15,63 @@
 
 a {
   font-weight: 500;
-  color: white;
+  color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
-  color: rgb(10, 207, 131);
+  color: #535bf2;
 }
 
-body {
+/* body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
+} */
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2.5em;
   line-height: 1.1;
+  margin: 0;
 }
 
 button {
   border-radius: 8px;
-  margin: 2em 0;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   width: 100%;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: rgb(10, 207, 131);
+  background-color: #0ACF83;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #0ef83c;
+  border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-textarea {
+input {
   border-radius: 8px;
-  width: 100%;
-  font-size: 500;
+  border: 1px solid white;
+  font-size: 1em;
+  font-weight: 500;
   font-family: inherit;
-  resize: vertical;
+  background-color: white;
+  color: black;
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+a {
+  color: white;
 }
 
 @media (prefers-color-scheme: light) {
