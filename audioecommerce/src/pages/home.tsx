@@ -12,13 +12,11 @@ import { useState } from "react";
 export const Home = () => {
     const { products, error } = useProducts();
     const navigate = useNavigate();
-    const { user } = useAuth(); // Use o hook de autenticação
+    const { user } = useAuth();
     const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-    // Obter categorias únicas
     const categories = ['all', ...new Set(products.map(p => p.category))] as string[];
 
-    // Filtrar produtos por categoria
     const filteredProducts = selectedCategory === 'all'
         ? products
         : products.filter(p => p.category === selectedCategory);
@@ -26,12 +24,12 @@ export const Home = () => {
     // if (loading) return <LoadingSpinner />;
     if (error) return <div className="error-message">{error}</div>;
 
+    const featuredProducts = products.slice(0, 5);
+
     return (
         <div className="home-page">
-            {/* App Bar */}
             <header className="app-bar">
                 <div className="app-bar-content">
-                    {/* Ícone do menu à esquerda */}
                     <button
                         className="icon-button"
                         onClick={() => console.log('Abrir menu')}
@@ -40,13 +38,11 @@ export const Home = () => {
                         <FiMenu size={24} />
                     </button>
 
-                    {/* Logo central */}
                     <div className="app-title" onClick={() => navigate('/')}>
                         <MdHeadphones className="logo-icon" color="#0ACF83" />
                         <span>Audio</span>
                     </div>
 
-                    {/* Avatar do usuário à direita */}
                     <div className="user-section">
                         <img
                             src={user?.photoURL || defaultAvatar}
@@ -77,8 +73,6 @@ export const Home = () => {
 
                 </div>
 
-
-                {/* Nova seção de categorias */}
                 <div className="container">
                     <section className="categories-section">
                         <div className="category-buttons">
@@ -100,6 +94,37 @@ export const Home = () => {
                                     product={product}
                                     onClick={() => navigate(`/product/${product.id}`)}
                                 />
+                            ))}
+                        </div>
+                    </section>
+
+
+                    <section className="featured-section">
+                        <div className="section-header">
+                            <p>Featured Products</p>
+                            <button
+                                className="see-all-btn"
+                                onClick={() => navigate('/products')}
+                            >
+                                See All
+                            </button>
+                        </div>
+
+                        <div className="featured-carousel">
+                            {featuredProducts.map(product => (
+                                <div key={product.id} className="carousel-item">
+                                    <img
+                                        src={product.img}
+                                        alt={product.name}
+                                        className="feature-product-image"
+                                    />
+                                    <div className="feature-product-info">
+                                        <h3>{product.name}</h3>
+
+                                        <p className="price">${product.price.toFixed(2)}</p>
+
+                                    </div>
+                                </div>
                             ))}
                         </div>
                     </section>

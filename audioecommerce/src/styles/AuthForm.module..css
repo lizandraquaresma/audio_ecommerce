@@ -1,11 +1,3 @@
-body {
-  background-image: 
-    linear-gradient(#125038, #16C78200),
-    url("../assets/images/auth_bgd.png");
-  background-position: center;
-  background-size: cover;
-}
-
 .error {
   color: red;
   margin-top: 1rem;
@@ -18,6 +10,10 @@ form {
 }
 
 .auth-container {
+  background-image: linear-gradient(#125038, #16c78200),
+    url("../assets/images/auth_bgd.png");
+  background-position: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
