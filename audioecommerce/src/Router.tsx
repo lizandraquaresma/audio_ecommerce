@@ -3,6 +3,8 @@ import { LoginForm } from "./components/LoginForm";
 import { RegisterForm } from "./components/RegisterFomr";
 import { RequireAuth } from "./components/RequireAuth";
 import { Home } from "./pages/home";
+// import { Profile } from "./pages/Profile";
+import { Search } from "./pages/Search";
 
 const Router = () => {
   return (
@@ -21,14 +23,14 @@ const Router = () => {
             </RequireAuth>
           }
         />
-        {/* <Route
-          path="/profile"
+        <Route
+          path="/search"
           element={
             <RequireAuth>
-              <Profile />
+              <Search />
             </RequireAuth>
           }
-        /> */}
+        />
       </Routes>
     </BrowserRouter>
   );
