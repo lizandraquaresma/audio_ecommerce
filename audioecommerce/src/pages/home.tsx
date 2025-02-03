@@ -2,12 +2,12 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import useProducts from "../hooks/useProducts";
 // import LoadingSpinner from "../components/LoadingSpinner";
+import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { MdHeadphones } from "react-icons/md";
 import defaultAvatar from '../assets/images/default-avatar.jpg';
 import ProductCard from "../components/ProductCard";
 import "../styles/Home.css";
-import { useState } from "react";
 
 export const Home = () => {
     const { products, error } = useProducts();
@@ -101,10 +101,10 @@ export const Home = () => {
 
                     <section className="featured-section">
                         <div className="section-header">
-                            <p>Featured Products</p>
+                            <h2>Featured Products</h2>
                             <button
                                 className="see-all-btn"
-                                onClick={() => navigate('/products')}
+                                onClick={() => navigate('/explore')}
                             >
                                 See All
                             </button>
