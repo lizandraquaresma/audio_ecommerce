@@ -100,7 +100,7 @@ export const Search = () => {
                                 />
                                 <div className="popular-product-info">
                                     <h3>{product.name}</h3>
-                                    <span className="price">${product.price.toFixed(2)}</span>
+                                    <span className="search-price">${product.price.toFixed(2)}</span>
                                     <div className="popularity">
                                         <span className="rating">
                                             ⭐ {calculateAverageRating(product.reviews)}
