@@ -5,90 +5,90 @@
 }
 
 .app-bar {
-    background-color: #ffffff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .app-bar-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 64px;
 }
 
 .icon-button {
-    max-width: 40px;
-    background: none;
-    border: none;
-    padding: 12px;
-    cursor: pointer;
-    color: #2d2d2d;
-    transition: opacity 0.2s;
-    border-radius: 50%;
+  max-width: 40px;
+  background: none;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  color: #2d2d2d;
+  transition: opacity 0.2s;
+  border-radius: 50%;
 }
 
 .icon-button:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .app-title {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #2d2d2d;
-    cursor: pointer;
-    transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
 .app-title:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .logo-icon {
-    color: #007bff;
-    font-size: 1.8rem;
+  color: #007bff;
+  font-size: 1.8rem;
 }
 
 .user-section {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .user-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #eee;
-    cursor: pointer;
-    transition: transform 0.2s;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eee;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
 .user-avatar:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .main-content {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero-section {
-    padding: 1em;
+  padding: 1em;
 }
 
-.welcome-title{
-    color: black;
-    font-size: medium;
-    font-weight: 400;
+.welcome-title {
+  color: black;
+  font-size: medium;
+  font-weight: 400;
 }
 
 .welcome-text {
@@ -124,182 +124,182 @@
 }
 
 .container {
-    padding: 1em;
-    background-color: #F6F6F6;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
+  padding: 1em;
+  background-color: #f6f6f6;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .categories-section {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .category-buttons {
-    display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    padding-bottom: 1rem;
-    margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .category-btn {
-    background: none;
-    border: none;
-    color: gray;
-    border-radius: 20px;
-    padding: 0.5rem 1.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    font-size: 0.9rem;
+  background: none;
+  border: none;
+  color: gray;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-size: 0.9rem;
 }
 
 .category-btn.active {
-    background-color: #0ACF83;
-    color: white;
-    border-color: #0ACF83;
+  background-color: #0acf83;
+  color: white;
+  border-color: #0acf83;
 }
 
 .category-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .category-carousel {
-    display: flex;
-    gap: 1.5rem;
-    overflow-x: auto;
-    padding-bottom: 1rem;
-    scroll-behavior: smooth;
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
 }
 
 .category-carousel::-webkit-scrollbar {
-    height: 6px;
+  height: 6px;
 }
 
 .category-carousel::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 3px;
+  background: #f1f1f1;
+  border-radius: 3px;
 }
 
 .category-carousel::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 3px;
+  background: #888;
+  border-radius: 3px;
 }
 
 .category-carousel::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  background: #555;
 }
 
 .product-card {
-    flex: 0 0 100%;
-    scroll-snap-align: start;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
 }
 
 .featured-section {
-    margin: 2rem 0;
+  margin: 2rem 0;
 }
 
 .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
 
-    p{
-        color: black;
-        font-size: 1.2rem;
-        font-weight: 500;
-    }
+  p {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
 
-    button{
-        max-width: fit-content;
-        color: gray;
-    }
+  button {
+    max-width: fit-content;
+    color: gray;
+  }
 }
 
 .see-all-btn {
-    background: none;
-    border: none;
-    color: #007bff;
-    font-weight: 600;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    transition: opacity 0.3s;
+  background: none;
+  border: none;
+  color: #007bff;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: opacity 0.3s;
 }
 
 .see-all-btn:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .featured-carousel {
-    display: flex;
-    gap: 1.5rem;
-    overflow-x: auto;
-    padding-bottom: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
 }
 
 .carousel-item {
-    flex: 0 0 200px;
-    background: white;
-    border-radius: 16px;
-    overflow: hidden;
-    transition: transform 0.3s;
+  flex: 0 0 200px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s;
 }
 
 .carousel-item:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .feature-product-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 1px solid #eee;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
 }
 
 .feature-product-info {
-    padding: 0 1rem;
+  padding: 0 1rem;
 
-    h3 {
-        font-weight: 500;
-    }
+  h3 {
+    font-weight: 500;
+  }
 }
 
 .price-category {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
 }
 
 .price {
-    color: black;
-    font-weight: 700;
-    font-size: 1.1rem;
+  color: black;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .category {
-    background: #f0f0f0;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
+  background: #f0f0f0;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
 }
 
 .featured-carousel::-webkit-scrollbar {
-    height: 6px;
+  height: 6px;
 }
 
 .featured-carousel::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 3px;
+  background: #f1f1f1;
+  border-radius: 3px;
 }
 
 .featured-carousel::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 3px;
+  background: #888;
+  border-radius: 3px;
 }
 
 .featured-carousel::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  background: #555;
 }
