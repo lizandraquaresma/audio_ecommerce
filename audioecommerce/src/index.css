@@ -5,12 +5,9 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: white;
 
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -22,18 +19,18 @@ a:hover {
   color: #535bf2;
 }
 
-/* body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-} */
-
 h1 {
   font-size: 2.5em;
   line-height: 1.1;
   margin: 0;
+}
+
+h2 {
+  color: black;
+}
+
+h3 {
+  color: black;
 }
 
 button {
@@ -85,4 +82,25 @@ a {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #dc3545;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
 }

@@ -1,8 +1,13 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { LoginForm } from "./components/LoginForm";
 import { RegisterForm } from "./components/RegisterFomr";
 import { RequireAuth } from "./components/RequireAuth";
 import { Home } from "./pages/home";
+// import { Profile } from "./pages/Profile";
+import { Explorer } from "./pages/ExplorerProducts";
+import { Search } from "./pages/Search";
+import { ProductDetail } from './pages/ProductDetail';
+import { ShoppingCart } from './pages/ShoppingCart';
 
 const Router = () => {
   return (
@@ -11,7 +16,7 @@ const Router = () => {
         {/* Rotas públicas */}
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<RegisterForm />} />
-        
+
         {/* Rotas protegidas */}
         <Route
           path="/"
@@ -21,14 +26,17 @@ const Router = () => {
             </RequireAuth>
           }
         />
-        {/* <Route
-          path="/profile"
+        <Route
+          path="/search"
           element={
             <RequireAuth>
-              <Profile />
+              <Search />
             </RequireAuth>
           }
-        /> */}
+        />
+        <Route path="/explore" element={<RequireAuth><Explorer /></RequireAuth>} />
+        <Route path="/product/:id" element={<RequireAuth><ProductDetail /></RequireAuth>} />
+        <Route path="/cart" element={<RequireAuth><ShoppingCart /></RequireAuth>} />
       </Routes>
     </BrowserRouter>
   );

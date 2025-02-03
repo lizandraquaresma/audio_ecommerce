@@ -1,39 +1,33 @@
+import { FiArrowRight } from "react-icons/fi";
 import { Product } from "../services/api";
+import "../styles/ProductCard.css";
 
 interface ProductCardProps {
     product: Product;
+    onClick: () => void;
 }
 
-const ProductCard = ({ product }: ProductCardProps) => {
-    const averageRating =
-        product.reviews.reduce((sum, review) => sum + review.rating, 0) /
-        product.reviews.length;
+const ProductCard = ({ product, onClick }: ProductCardProps) => {
 
     return (
-        <div className="product-card">
+        <div
+            className="home-product-card"
+            onClick={onClick}
+            role="button"
+            tabIndex={0}
+        >
+            <div className="home-product-info">
+                <h3>{product.name}</h3>
+                <button className="home-add-to-cart">Shop now <FiArrowRight/></button>
+            </div>
             <img
                 src={product.img}
                 alt={product.name}
-                className="product-image"
+                className="home-product-image"
                 loading="lazy"
             />
-            <div className="product-info">
-                <h3>{product.name}</h3>
-                <div className="rating">
-                    {Array.from({ length: 5 }).map((_, index) => (
-                        <span
-                            key={index}
-                            className={`star ${index < Math.round(averageRating) ? 'filled' : ''}`}
-                        >
-                            ★
-                        </span>
-                    ))}
-                    <span>({product.reviews.length})</span>
-                </div>
-                <p className="price">${product.price.toFixed(2)}</p>
-                <p className="category">{product.category}</p>
-                <button className="add-to-cart">Add to Cart</button>
-            </div>
+
+
         </div>
     );
 };
