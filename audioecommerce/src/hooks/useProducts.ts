@@ -21,7 +21,12 @@ const useProducts = () => {
     loadProducts();
   }, []);
 
-  return { products, loading, error };
+  const getProductById = (id: string) => {
+    return products.find(product => product.id === id) || null;
+  };
+
+
+  return { products, loading, error, getProductById };
 };
 
 export default useProducts;
