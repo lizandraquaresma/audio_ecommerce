@@ -24,7 +24,7 @@ export const ShoppingCart = () => {
                         <FiArrowLeft size={24} />
                     </button>
                     <h1>Shopping Cart</h1>
-                    <button className="icon-button" onClick={() => clearCart}>
+                    <button className="icon-button" onClick={() => clearCart()}>
                         <FiDelete size={24} />
                     </button>
                 </div>
@@ -76,8 +76,7 @@ export const ShoppingCart = () => {
                     <div className="cart-footer">
                         <div className="cart-summary">
                             <div className="total-items">
-                                <p>Total </p>
-                                <p>{totalItems} itens</p>
+                                    <p>Total {totalItems} { totalItems <= 1 ? 'item' : 'itens'}</p>
                             </div>
 
 

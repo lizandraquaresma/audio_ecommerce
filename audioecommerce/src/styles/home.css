@@ -191,20 +191,21 @@
   background: #555;
 }
 
-.product-card {
-  flex: 0 0 100%;
-  scroll-snap-align: start;
-}
 
 .featured-section {
   margin: 2rem 0;
 }
 
-.section-header {
+.home-section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
+
+  h2{
+    font-size: larger;
+    font-weight: 600;
+  }
 
   p {
     color: black;

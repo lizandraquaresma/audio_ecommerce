@@ -100,7 +100,7 @@ export const Home = () => {
 
 
                     <section className="featured-section">
-                        <div className="section-header">
+                        <div className="home-section-header">
                             <h2>Featured Products</h2>
                             <button
                                 className="see-all-btn"
@@ -112,7 +112,7 @@ export const Home = () => {
 
                         <div className="featured-carousel">
                             {featuredProducts.map(product => (
-                                <div key={product.id} className="carousel-item">
+                                <div key={product.id} className="carousel-item" onClick={() => navigate(`/product/${product.id}` )}>
                                     <img
                                         src={product.img}
                                         alt={product.name}

@@ -1,5 +1,4 @@
-// src/contexts/CartContext.tsx
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode, useEffect } from "react";
 
 export interface CartItem {
   id: string;
@@ -19,20 +18,42 @@ interface CartContextType {
   totalPrice: number;
 }
 
-// Exporte o contexto
 export const CartContext = createContext<CartContextType | undefined>(undefined);
 
+const loadCartFromStorage = (): CartItem[] => {
+  try {
+    const storedCart = localStorage.getItem('cart');
+    return storedCart ? JSON.parse(storedCart) : [];
+  } catch (error) {
+    console.error("Failed to load cart from localStorage:", error);
+    return [];
+  }
+};
+
+const saveCartToStorage = (cartItems: CartItem[]) => {
+  try {
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+  } catch (error) {
+    console.error("Failed to save cart to localStorage:", error);
+  }
+};
+
 export const CartProvider = ({ children }: { children: ReactNode }) => {
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [cartItems, setCartItems] = useState<CartItem[]>(loadCartFromStorage);
+
+  useEffect(() => {
+    saveCartToStorage(cartItems);
+  }, [cartItems]);
 
   const addToCart = (item: Omit<CartItem, 'quantity'>) => {
     setCartItems(prev => {
       const existing = prev.find(i => i.id === item.id);
-      return existing
+      const updatedCart = existing
         ? prev.map(i =>
           i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
         )
         : [...prev, { ...item, quantity: 1 }];
+      return updatedCart;
     });
   };
 

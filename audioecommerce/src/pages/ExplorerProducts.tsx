@@ -6,7 +6,6 @@ import { FiArrowLeft, FiShoppingCart, FiFilter } from 'react-icons/fi';
 import ExploreProductCard from '../components/ExploreProductCard';
 import '../styles/ExplorerProducts.css';
 
-// Tipo para ordenação
 type SortOption = 'popularity' | 'newest' | 'oldest' | 'price-high' | 'price-low';
 
 export const Explorer = () => {
@@ -14,14 +13,11 @@ export const Explorer = () => {
     const navigate = useNavigate();
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-    // Estados para filtros
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
     const [sortBy, setSortBy] = useState<SortOption>('popularity');
 
-    // Obter categorias únicas
     const categories = Array.from(new Set(products.map(p => p.category)));
 
-    // Aplicar filtros e ordenação
     const filteredProducts = products
         .filter(product =>
             selectedCategories.length === 0 ||
@@ -44,7 +40,6 @@ export const Explorer = () => {
             }
         });
     
-    // Mapeamento para exibir o nome legível para cada opção de ordenação
     const sortOptions: { value: SortOption; label: string }[] = [
         { value: 'popularity', label: 'Popularity' },
         { value: 'newest', label: 'Newest' },
@@ -86,7 +81,6 @@ export const Explorer = () => {
                                 </div>
 
                                 <div className="filters-content">
-                                    {/* Filtro por Categoria */}
                                     <div className="filter-section">
                                         <h3>Category</h3>
                                         <div className="category-filters">
@@ -106,7 +100,6 @@ export const Explorer = () => {
                                         </div>
                                     </div>
 
-                                    {/* Ordenação por Botões */}
                                     <div className="filter-section">
                                         <h3>Sort By</h3>
                                         <div className="sort-filters">
@@ -131,7 +124,6 @@ export const Explorer = () => {
                     </Dialog.Root>
                 </div>
 
-                {/* Lista de produtos */}
                 <section className="explore-products-grid">
                     {filteredProducts.map(product => (
                         <ExploreProductCard

@@ -1,6 +1,7 @@
 .search-page {
   max-width: 1200px;
   min-height: 70vh;
+  margin: 0 auto;
 }
 
 .search-container {
@@ -123,5 +124,17 @@
   .popular-card img {
     width: 100px;
     height: auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .popular-list{
+    display: flex;
+
+  }
+  .popular-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 }
