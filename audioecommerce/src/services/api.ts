@@ -23,7 +23,7 @@ export interface Review {
 export const fetchProducts = async (): Promise<Product[]> => {
   try {
     const response = await axios.get<Product[]>(
-      "https://run.mocky.io/v3/e5714856-f304-4a2c-b5df-2e70b97135d5"
+      "https://run.mocky.io/v3/9b4feb98-1e3a-4a16-ac8f-b56eab0afc3e"
     );
     
     if (!Array.isArray(response.data)) {

@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-catch */
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
